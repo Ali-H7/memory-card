@@ -1,5 +1,6 @@
 import '../styles/PokemonList.css';
 import capitalizeFirstLetter from '../helpers/capitalizeFirstLetter';
+
 function PokemonList({ list, clickEvent }) {
   return (
     <ul className='pokemon-list'>

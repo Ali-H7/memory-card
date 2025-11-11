@@ -24,7 +24,7 @@ function Game({ pokemonList, restartGame, bestScore, setBestScore }) {
 
   return (
     <div className='game'>
-      <div>
+      <div className='score'>
         <p>Score: {currentScore}</p>
         <p>Best Score: {bestScore}</p>
       </div>
