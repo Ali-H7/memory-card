@@ -1,13 +1,15 @@
 import '../styles/PokemonList.css';
-
+import capitalizeFirstLetter from '../helpers/capitalizeFirstLetter';
 function PokemonList({ list }) {
   return (
-    <ul>
+    <ul className='pokemon-list'>
       {list.map((pokemon) => {
         return (
-          <li key={pokemon.name}>
-            <img src={pokemon.sprites.front_default} alt={pokemon} />
-            <p>{pokemon.name}</p>
+          <li key={pokemon.name} className='pokemon-card'>
+            <img src={pokemon.sprites.front_default} alt={pokemon.name} />
+            <div className='pokemon-name'>
+              <p>{capitalizeFirstLetter(pokemon.name)}</p>
+            </div>
           </li>
         );
       })}

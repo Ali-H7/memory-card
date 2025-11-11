@@ -1,0 +1,30 @@
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style-type: none;
+  background-color: #fffbeb;
+  border-radius: 4px;
+  padding: 16px;
+  gap: 16px;
+}
+
+.pokemon-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #1b1c1d;
+  border: 1px solid #ffcc00;
+  border-radius: 4px;
+}
+
+.pokemon-name {
+  min-width: 100%;
+  border-top: 1px solid #ffcc00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}

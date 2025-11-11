@@ -2,6 +2,7 @@ import '../styles/Game.css';
 import { useState, useEffect } from 'react';
 import fetchMultipleItems from '../fetchData';
 import PokemonList from './PokemonList';
+import shuffle from 'lodash/shuffle';
 
 const pokemons = [
   'bulbasaur',
@@ -20,6 +21,7 @@ const pokemons = [
 
 function Game() {
   const [pokemonList, setPokemonList] = useState([]);
+  const shuffledList = shuffle(pokemonList);
 
   useEffect(() => {
     async function fetchThenSetList() {
@@ -30,8 +32,12 @@ function Game() {
   }, []);
 
   return (
-    <div>
-      <PokemonList list={pokemonList} />
+    <div className='game'>
+      <div>
+        <p>Score:</p>
+        <p>Best Score:</p>
+      </div>
+      <PokemonList list={shuffledList} />
     </div>
   );
 }
