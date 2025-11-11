@@ -2,13 +2,20 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Instructions from './components/Instructions';
 import Game from './components/Game';
+import { useState } from 'react';
 
 function App() {
+  const [gameKey, setGameKey] = useState(crypto.randomUUID()); // used to Restart the game
+
+  function resetGame() {
+    setGameKey(crypto.randomUUID());
+  }
+
   return (
     <div>
       <Navbar />
       <Instructions />
-      <Game />
+      <Game restartGame={resetGame} key={gameKey} />
     </div>
   );
 }
