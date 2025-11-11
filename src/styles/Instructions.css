@@ -1,0 +1,9 @@
+.note {
+  height: 32px;
+  display: flex;
+  background-color: #fffbeb;
+  color: #1b1c1d;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
