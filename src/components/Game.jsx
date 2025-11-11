@@ -19,10 +19,9 @@ const pokemons = [
   'mudkip',
 ];
 
-function Game({ restartGame }) {
+function Game({ restartGame, bestScore, setBestScore }) {
   const [pokemonList, setPokemonList] = useState([]);
   const [currentScore, setCurrentScore] = useState(0);
-  const [bestScore, setBestScore] = useState(0);
   const [playedCards, setPlayedCards] = useState([]);
 
   const shuffledList = shuffle(pokemonList);

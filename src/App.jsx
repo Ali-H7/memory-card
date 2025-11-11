@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 function App() {
   const [gameKey, setGameKey] = useState(crypto.randomUUID()); // used to Restart the game
+  const [bestScore, setBestScore] = useState(0);
 
   function resetGame() {
     setGameKey(crypto.randomUUID());
@@ -15,7 +16,7 @@ function App() {
     <div>
       <Navbar />
       <Instructions />
-      <Game restartGame={resetGame} key={gameKey} />
+      <Game restartGame={resetGame} key={gameKey} bestScore={bestScore} setBestScore={setBestScore} />
     </div>
   );
 }
