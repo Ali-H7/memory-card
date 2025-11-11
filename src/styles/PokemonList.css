@@ -13,7 +13,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1.4rem;
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
   font-weight: bold;
   color: #1b1c1d;
   border: 1px solid #ffcc00;
@@ -40,8 +40,8 @@
   }
 }
 
-@media (max-width: 410px) {
-  .pokemon-list {
-    transform: scale(0.9);
+@media (max-width: 415px) {
+  .pokemon-card {
+    width: 88px;
   }
 }
