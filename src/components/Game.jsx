@@ -1,6 +1,7 @@
 import '../styles/Game.css';
-import fetchMultipleItems from '../fetchData';
 import { useState, useEffect } from 'react';
+import fetchMultipleItems from '../fetchData';
+import PokemonList from './PokemonList';
 
 const pokemons = [
   'bulbasaur',
@@ -30,16 +31,7 @@ function Game() {
 
   return (
     <div>
-      <ul>
-        {pokemonList.map((pokemon) => {
-          return (
-            <li key={pokemon.name}>
-              <img src={pokemon.sprites.front_default} alt={pokemon} />
-              <p>{pokemon.name}</p>
-            </li>
-          );
-        })}
-      </ul>
+      <PokemonList list={pokemonList} />
     </div>
   );
 }
